@@ -1,0 +1,18 @@
+<div class="container">
+    <br>
+    <h3>Welcome! to gapstars test</h3>
+    <h5>Developed by Dananjaya M. Perera.</h5>
+    <br>
+    <div>
+        <p>Login from here:</p>
+        <mat-form-field>
+            <input matInput [(ngModel)]="username" placeholder="Username">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="password" placeholder="Password">
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" (click)="onLogin()">Login</button>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<mat-checkbox id="{{id}}" (change)="select(id)" [(ngModel)]="selected"></mat-checkbox> <span (click)="showChildren()">{{name}} ({{count}})</span>
+<div class="selectall" *ngIf="_showChildren && haveChildren()" style="padding-left: 40px;">
+    <mat-checkbox (change)="selectAll(id)" [(ngModel)]="_allSelected">Select All</mat-checkbox>
+</div>
+
+<ng-container *ngFor="let item of data; let i = index">
+    <div *ngIf="_showChildren && item.parent == id">
+        <app-box-caps [data]="data" [name]="item.name" [id]="item.id" [parent]="item.parent" [count]="item.count" [selected]='item.selected'></app-box-caps>
+    </div>
+</ng-container>

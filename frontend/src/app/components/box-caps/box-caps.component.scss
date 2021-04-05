@@ -1,0 +1,25 @@
+:host{
+    padding-left: 20px;
+    display: block;
+    position: relative;
+}
+
+.chkbox{
+    display: flex;
+    padding-left: 20px;
+    width: calc(100% - 20px);
+}
+
+mat-checkbox{
+    margin-right: 8px;
+}
+
+div {
+    padding-left: 20px;
+}
+
+.selectall{
+    position: absolute;
+    right: 0;
+    top: 0;
+}

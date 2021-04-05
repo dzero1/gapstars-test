@@ -1,0 +1,22 @@
+<div class="container">
+    <h3>Select filters</h3>
+
+    <ng-container *ngFor="let item of list; let i = index">
+        <div>
+            <app-box-caps *ngIf="item.parent == 0" [data]="list" [name]="item.name" [id]="item.id" [parent]="item.parent" [count]="item.count" [selected]="item.selected"></app-box-caps>
+        </div>
+    </ng-container>
+
+    <br>
+
+    <button mat-button *ngIf="canDeselectAll()" (click)="deselectAll()">Deselect all</button>
+
+    <mat-chip-list class="chips">
+        <ng-container *ngFor="let item of list">
+            <mat-chip class="chip-box" *ngIf="item.selected" [removable]="true" (removed)="remove(item)">
+                {{item.name}}
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+        </ng-container>
+    </mat-chip-list>
+</div>
