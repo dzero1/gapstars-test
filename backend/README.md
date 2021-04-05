@@ -1,4 +1,4 @@
-#The PHP Slim framework RESTful api.
+# The PHP Slim framework RESTful api.
 
 How to setup:
 1. Import the backend/gapstars.sql into a new database schema. For my local environment I named it as "gapstars"
