@@ -28,8 +28,8 @@ class Config {
     // Auth settings
     public function auth() {
         return [
-            'secret' => 'crankedappsbestkeptsecret',
-            'expires' => 30, // in minutes
+            'secret' => 'dzerosecretforgapstarstest',
+            'expires' => 120, // in minutes
             'hash' => PASSWORD_DEFAULT,
             'jwt' => 'HS256'
         ];
